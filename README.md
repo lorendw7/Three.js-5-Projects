@@ -89,7 +89,8 @@
   BokehPass 景深，虚化背景突出主体。
 
 - [ ] **第十五课 · 粒子系统** — `lesson-15-particles/`
-  Points + PointsMaterial 做漂浮光点 / 星空。
+  Points + PointsMaterial 做漂浮光点 / 星空；
+  附带小节：用 Canvas `getImageData()` 读照片像素，把照片变成粒子（聚散效果基础）。
 
 - [ ] **第十六课 · GSAP 缓动动画** — `lesson-16-gsap/`
   用 GSAP 做镜头运动、过渡、交互动画。
@@ -122,15 +123,15 @@
 
 - [ ] **项目四 · 滚动动画 Scroll Animation** — `project-4-scroll-animation/`
   随页面滚动触发的平滑动画。
-  代码参考：[bobbyroe](https://github.com/bobbyroe) 的 scroll-animation 仓库
+  代码参考：[bobbyroe](https://github.com/bobbyroe/scroll-animation) 的 scroll-animation 仓库
   *关联基础课：L16 GSAP 缓动*
 
 - [ ] **项目五 · 物理引擎 Physics** — `project-5-physics/`
   用 Three.js + Rapier 物理引擎做可交互的物理效果（碰撞、重力等）。
-  代码参考：[bobbyroe](https://github.com/bobbyroe) 的 physics 仓库
+  代码参考：[bobbyroe](https://github.com/bobbyroe/physics-with-rapier-and-three) 的 physics 仓库
   *新技术：Rapier 物理引擎（基础课未涵盖，项目中现学）*
 
-> 链接里有几个是教程描述中被截断的，到时我们直接去 [Bobby Roe 的 GitHub](https://github.com/bobbyroe) 找对应仓库即可。
+> 可以直接去 [Bobby Roe 的 GitHub](https://github.com/bobbyroe) 找对应仓库即可。
 
 ---
 
