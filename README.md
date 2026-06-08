@@ -45,7 +45,7 @@
 - [x] **第二课 · 灯光与鼠标控制** — `lesson-02-light-and-controls/`
   受光材质 MeshStandardMaterial、环境光+方向光、OrbitControls 鼠标拖动视角。
 
-- [ ] **第三课 · JS 复习（ES6+ 与异步）** — `lesson-03-js-essentials/`
+- [x] **第三课 · JS 复习（ES6+ 与异步）** — `lesson-03-js-essentials/`
   import/export 模块、const/let、箭头函数、解构、模板字符串；
   **重点：Promise 与 async/await**——因为后面加载资源全是异步操作。
 
