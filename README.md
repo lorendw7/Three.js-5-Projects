@@ -51,7 +51,7 @@
 
 ### 阶段二 · 物体、材质与氛围
 
-- [ ] **第四课 · 几何体家族 + 坐标辅助** — `lesson-04-geometries/`
+- [x] **第四课 · 几何体家族 + 坐标辅助** — `lesson-04-geometries/`
   Box / Sphere / Torus / Cylinder 等几何体；AxesHelper / GridHelper 辅助理解坐标系。
 
 - [ ] **第五课 · 材质与纹理贴图** — `lesson-05-textures/`
