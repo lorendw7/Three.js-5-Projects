@@ -4,6 +4,7 @@
 > 每个知识点都拆成**最小可运行例子**，配**详细中文注释** + **官方文档英文要点**。
 
 学习分两条线：
+
 - **基础课（L1~L17）**：把每块技术拆成最小例子学透（见下方"课程大纲"）。
 - **5 个实战项目**：配合 YouTube 教程动手做完整的小项目，把基础课学的东西串起来用（见下方"5 个实战项目"）。
 
@@ -13,23 +14,23 @@
 
 ## 🗺 技术总览
 
-| 技术块 | 具体内容 | 对应课程 |
-|--------|---------|---------|
-| **JS 基础** | ES6+ 模块、Promise / async-await（加载资源是异步的）| L3 |
-| **Three.js 核心** | Scene / PerspectiveCamera / WebGLRenderer | L1 ✅ |
-| **灯光系统** | AmbientLight 打底 + DirectionalLight / PointLight 主光 | L2 ✅ / L6 |
-| **几何体与材质** | 各种几何体、材质参数、纹理贴图、坐标辅助 | L4 / L5 |
-| **氛围基础** | 雾 fog、渐变背景、场景环境 | L7 |
-| **加载 GLB 模型** | GLTFLoader 加载 .glb，调位置/缩放/材质 | L8 |
-| **加载进度条** | LoadingManager（大模型加载需要进度提示）| L9 |
-| **模型压缩解码** | DRACOLoader / meshopt（给大模型减负）| L10 |
-| **模型动画** | AnimationMixer 播放 GLB 自带动画 | L11 |
-| **真实反光** | HDRI 环境贴图（RGBELoader），让金属/反光材质真实 | L12 |
-| **泛光 Bloom** | EffectComposer 后期处理——灯光发光感的关键 | L13 |
-| **景深 DoF** | EffectComposer 景深，突出主体、虚化背景 | L14 |
-| **粒子系统** | Points 做漂浮光点 / 星空 | L15 |
-| **缓动动画** | GSAP 做镜头运动和过渡 | L16 |
-| **（可选）省力方案** | React Three Fiber + Drei 封装版 | L17 |
+| 技术块             | 具体内容                                               | 对应课程      |
+| --------------- | -------------------------------------------------- | --------- |
+| **JS 基础**       | ES6+ 模块、Promise / async-await（加载资源是异步的）            | L3        |
+| **Three.js 核心** | Scene / PerspectiveCamera / WebGLRenderer          | L1 ✅      |
+| **灯光系统**        | AmbientLight 打底 + DirectionalLight / PointLight 主光 | L2 ✅ / L6 |
+| **几何体与材质**      | 各种几何体、材质参数、纹理贴图、坐标辅助                               | L4 / L5   |
+| **氛围基础**        | 雾 fog、渐变背景、场景环境                                    | L7        |
+| **加载 GLB 模型**   | GLTFLoader 加载 .glb，调位置/缩放/材质                       | L8        |
+| **加载进度条**       | LoadingManager（大模型加载需要进度提示）                        | L9        |
+| **模型压缩解码**      | DRACOLoader / meshopt（给大模型减负）                      | L10       |
+| **模型动画**        | AnimationMixer 播放 GLB 自带动画                         | L11       |
+| **真实反光**        | HDRI 环境贴图（RGBELoader），让金属/反光材质真实                   | L12       |
+| **泛光 Bloom**    | EffectComposer 后期处理——灯光发光感的关键                      | L13       |
+| **景深 DoF**      | EffectComposer 景深，突出主体、虚化背景                        | L14       |
+| **粒子系统**        | Points 做漂浮光点 / 星空                                  | L15       |
+| **缓动动画**        | GSAP 做镜头运动和过渡                                      | L16       |
+| **（可选）省力方案**    | React Three Fiber + Drei 封装版                       | L17       |
 
 > 注：每块技术只学**最小可运行例子**。
 
@@ -54,7 +55,7 @@
 - [x] **第四课 · 几何体家族 + 坐标辅助** — `lesson-04-geometries/`
   Box / Sphere / Torus / Cylinder 等几何体；AxesHelper / GridHelper 辅助理解坐标系。
 
-- [ ] **第五课 · 材质与纹理贴图** — `lesson-05-textures/`
+- [x] **第五课 · 材质与纹理贴图** — `lesson-05-textures/`
   TextureLoader 加载图片贴图，map / normalMap / roughnessMap 等。
 
 - [ ] **第六课 · 灯光进阶** — `lesson-06-lights-deep/`

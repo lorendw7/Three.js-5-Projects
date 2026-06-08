@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>第五课 - 材质与纹理贴图</title>
+    <style>
+      body { margin: 0; }
+      canvas { display: block; }
+      #tip { position: fixed; top: 12px; left: 12px; color: #fff;
+             font-family: system-ui, sans-serif; font-size: 13px; line-height: 1.6;
+             background: rgba(0,0,0,0.55); padding: 8px 12px; border-radius: 6px; }
+      #loading { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+                 color: #fff; font-family: system-ui, sans-serif; font-size: 18px; }
+    </style>
+  </head>
+  <body>
+    <div id="tip">
+      左：只有颜色贴图(map)　|　中：颜色+凹凸+粗糙度(完整 PBR)　|　右：法线贴图(normalMap)<br />
+      鼠标拖动旋转 · 滚轮缩放
+    </div>
+    <!-- 贴图要联网下载，没到位前先显示"加载中"，加载完 main.js 会把它删掉 -->
+    <div id="loading">贴图加载中…（需要联网）</div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

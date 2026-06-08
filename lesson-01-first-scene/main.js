@@ -2,6 +2,11 @@
 // 第一课：第一个 Three.js 场景（一个旋转的立方体）
 // ============================================================
 //
+// 【本课地位】这是整个课程的地基。任何 Three.js 程序都离不开这 5 块：
+//   1) Scene 场景   2) Camera 相机   3) Renderer 渲染器
+//   4) Mesh 物体(几何体+材质)   5) 动画循环
+// 记住这个骨架，后面每一课都只是往这个骨架里加东西。
+//
 // 引入整个 Three.js 库，并起名叫 THREE。
 // 之后所有 Three.js 的类都通过 THREE.xxx 来用，比如 THREE.Scene。
 // 这里只写包名 'three'，由 Vite 自动从 node_modules 里找到它。
@@ -44,7 +49,8 @@ camera.position.z = 5;
 // ------------------------------------------------------------
 // 渲染器负责把"相机看到的场景"真正画(render)到屏幕上。
 // WebGLRenderer 使用显卡(WebGL)绘制，是最常用的渲染器。
-//   antialias: true 开启抗锯齿，让物体边缘更平滑。
+//   （WebGL 是浏览器里调用 GPU 画 3D 的标准技术，Three.js 帮我们把它的复杂细节封装好了。）
+//   antialias: true 开启抗锯齿，让物体边缘更平滑（否则斜边会有锯齿状台阶）。
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 // 设置渲染尺寸 = 整个浏览器窗口大小。
@@ -83,7 +89,8 @@ scene.add(cube);
 // 一帧静止画面是不够的，我们要让立方体持续旋转，所以需要"每帧重画"。
 // animate 函数里：先改一点旋转角度，再渲染一次。
 function animate() {
-  // rotation 以弧度(radian)为单位。每帧 +0.01，立方体就缓慢转动。
+  // rotation 以弧度(radian)为单位，不是角度！(360° = 2π ≈ 6.28 弧度，所以 0.01 弧度约等于 0.57°)
+  // 每帧 +0.01，一秒约 60 帧，立方体就缓慢转动。
   cube.rotation.x += 0.03; // 绕 x 轴（水平轴）旋转
   cube.rotation.y += 0.01; // 绕 y 轴（竖直轴）旋转
 

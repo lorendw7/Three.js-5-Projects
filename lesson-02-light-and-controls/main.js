@@ -2,9 +2,15 @@
 // 第二课：灯光 + 鼠标拖动视角(OrbitControls)
 // ============================================================
 //
+// 【复习第一课】Scene/Camera/Renderer 三件套 + Mesh + 动画循环。本课不改骨架。
+//
 // 本课在第一课基础上做两件事：
 //   1) 把"不吃光"的材质换成"吃光"的材质，并加灯光 → 立方体有立体明暗
 //   2) 加 OrbitControls → 用鼠标拖动、滚轮缩放来观察物体
+//
+// 【两个最常见的坑，本课都会踩到并讲清楚】
+//   坑A：用了吃光材质却没加灯光 → 物体全黑（很多人第一次"黑屏"的原因）
+//   坑B：开了 enableDamping 却忘了在循环里 controls.update() → 阻尼不生效
 
 import * as THREE from 'three';
 // OrbitControls 不在核心库里，属于"附加组件(addons)"，要单独引入。
@@ -68,8 +74,9 @@ scene.add(ambientLight); // 灯光也是对象，同样要 add 到场景
 // 模拟太阳——平行光，有明确方向，能造出明暗对比(立体感)。
 //   参数：(颜色, 强度)
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
-// 设置光源位置，光线方向 = 从这个位置射向原点(0,0,0)。
-// 放在右上前方，立方体就会右上亮、左下暗。
+// 设置光源位置，光线方向 = 从这个位置射向目标(默认是原点 0,0,0)。
+// 注意：方向光是"平行光"，position 只用来定"光从哪个方向来"，
+//       不像点光源那样离得越近越亮——它模拟的是无限远的太阳。
 directionalLight.position.set(-3, 4, 5);
 scene.add(directionalLight);
 

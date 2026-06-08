@@ -67,7 +67,10 @@ scene.add(grid);
 // 注意各几何体的【构造参数】不同，下面注释里写了最常用的几个。
 
 // 统一用一个稍微反光的标准材质（方便看出立体感）。
-// flatShading: true 让球/圆柱显示成"多边形切面"，能看清几何体是由三角面拼的。
+// 小知识：所有曲面(球/圆柱/圆环)在 3D 里都不是真正光滑的，而是用很多
+//   三角面拼出来的——这就是各几何体里"分段 segments"参数的意义：分段越多，
+//   三角面越多，看起来越圆滑，但也越耗性能。
+// （想直观看到三角面，可在下面材质里加一项 flatShading: true 试试。）
 function makeMaterial(color) {
   return new THREE.MeshStandardMaterial({ color, roughness: 0.5, metalness: 0.2 });
 }
@@ -102,9 +105,11 @@ for (const [geometry, color, x] of items) {
   // y = 1 让它们抬到网格地面上方一点，不要陷进地里。
   mesh.position.set(x, 1, 0);
 
-  // 平面默认是单面渲染（背面看不见），转一下让它正对我们更好看（可选）。
+  // 平面默认只渲染"正面"(法线朝向的那面)，从背面看会消失/穿透。
+  // 设成 DoubleSide 让正反两面都渲染，自转转到背面时也看得见。
+  // （性能提示：双面渲染开销更大，只在确实需要时才开。）
   if (geometry.type === 'PlaneGeometry') {
-    mesh.material.side = THREE.DoubleSide; // 双面都渲染，转到背面也可见
+    mesh.material.side = THREE.DoubleSide;
   }
 
   scene.add(mesh);
